@@ -37,7 +37,7 @@ export default {
           <li>
             <a href="http://router.vuejs.org/" target="_blank">vue-router</a>
           </li>
-          <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
+          <li><a href="https://github.com/nadimtuhin/redux-vue" target="_blank">redux vue</a></li>
           <li>
             <a
               href="http://vue-loader.vuejs.org/"
