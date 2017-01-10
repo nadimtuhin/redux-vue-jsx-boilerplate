@@ -2,6 +2,12 @@
 
 > A Vue.js project
 
+## vue jsx
+https://github.com/vuejs/babel-plugin-transform-vue-jsx
+
+## redux vue
+https://github.com/nadimtuhin/redux-vue
+
 ## Build Setup
 
 ``` bash
