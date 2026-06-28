@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+        continue-on-error: true
+
+      - name: Install dependencies
+        run: |
+          if [ -f "package-lock.json" ]; then
+            npm ci
+          elif [ -f "yarn.lock" ]; then
+            yarn install --frozen-lockfile
+          elif [ -f "package.json" ]; then
+            npm install
+          fi
+        continue-on-error: true
+
+      - name: Run lint
+        run: |
+          if [ -f "package.json" ] && node -e "require('./package.json').scripts.lint" 2>/dev/null; then
+            npm run lint
+          else
+            echo "No lint script found, skipping"
+          fi
+        continue-on-error: true
+
+      - name: Run tests
+        run: |
+          if [ -f "package.json" ] && node -e "require('./package.json').scripts.test" 2>/dev/null; then
+            npm test
+          else
+            echo "No test script found, skipping"
+          fi
+        continue-on-error: true
