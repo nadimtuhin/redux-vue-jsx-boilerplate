@@ -1,0 +1,2 @@
+{ "banners": { "h-start": "GET STARTED", "h-how": "WHAT IS INSIDE", "h-dev": "FOR DEVELOPERS" },
+  "hero": { "kicker": "VUE 2 · JSX · REDUX", "title": "redux-vue-jsx", "tagline": "Vue starter that uses JSX and a Redux store" } }

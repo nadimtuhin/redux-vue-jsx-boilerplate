@@ -1,4 +1,51 @@
+<div align="center">
+
 # redux-vue-jsx-boilerplate
+
+![redux-vue-jsx: a Vue starter that uses JSX and a Redux store](https://raw.githubusercontent.com/nadimtuhin/redux-vue-jsx-boilerplate/master/docs/images/hero.svg)
+
+**Vue without templates.** Components are written in JSX, state lives in a Redux store.
+
+`MIT` `Vue 2` `Redux`
+
+</div>
+
+<br>
+
+An old Vue 2 webpack starter. It is a toy-sized template: two components, one Redux store, and the build and test setup from the Vue webpack template. It uses 2016-era tools (webpack 1, Babel 6), so Tested: `npm run dev` compiles on Node 24.
+
+<br>
+
+![Get started](https://raw.githubusercontent.com/nadimtuhin/redux-vue-jsx-boilerplate/master/docs/images/h-start.svg)
+
+**1. Get the code and install it:**
+
+```bash
+git clone https://github.com/nadimtuhin/redux-vue-jsx-boilerplate.git && cd redux-vue-jsx-boilerplate
+npm install
+```
+
+**2. Start the dev server:**
+
+```bash
+npm run dev
+```
+
+Open `http://localhost:8080`. You get the Vue welcome page, built from JSX, with hot reload.
+
+<br>
+
+![What is inside](https://raw.githubusercontent.com/nadimtuhin/redux-vue-jsx-boilerplate/master/docs/images/h-how.svg)
+
+**JSX instead of templates.** `src/App.js` and `src/components/Hello.js` export components with a `render(h)` function that returns JSX, through [babel-plugin-transform-vue-jsx](https://github.com/vuejs/babel-plugin-transform-vue-jsx).
+
+**Redux instead of Vuex.** `src/store/index.js` creates a Redux store with one `ADD_TODO` action. `src/main.js` plugs it into Vue with [redux-vue](https://github.com/nadimtuhin/redux-vue).
+
+<br>
+
+![For developers](https://raw.githubusercontent.com/nadimtuhin/redux-vue-jsx-boilerplate/master/docs/images/h-dev.svg)
+
+Everything below is the original reference. You don't need it to get started.
 
 > A Vue.js project
 
