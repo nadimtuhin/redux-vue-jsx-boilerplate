@@ -37,5 +37,7 @@ jobs:
       - name: Build
         run: yarn build
 
-      # e2e (`yarn e2e`) is not run here: it needs Java plus selenium-server
-      # 2.53 and chromedriver 2.x, which cannot drive a current Chrome.
+      # chromedriver matches the runner's Chrome via detect_chromedriver_version
+      # in .npmrc; selenium-server needs the Java preinstalled on the runner.
+      - name: E2E tests
+        run: yarn e2e
