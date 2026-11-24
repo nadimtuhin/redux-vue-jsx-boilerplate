@@ -12,7 +12,7 @@
 
 <br>
 
-An old Vue 2 webpack starter. It is a toy-sized template: two components, one Redux store, and the build and test setup from the Vue webpack template. It uses 2016-era tools (webpack 1, Babel 6), so Tested: `npm run dev` compiles on Node 24.
+An old Vue 2 webpack starter. It is a toy-sized template: two components, one Redux store, and the build and test setup from the Vue webpack template. It uses 2016-era tools (webpack 1, Babel 6). `npm install`, `npm run dev`, `npm run lint`, `npm run unit` and `npm run build` work on Node 22 and 24 (checked in CI).
 
 <br>
 
@@ -70,7 +70,7 @@ npm run build
 # run unit tests
 npm run unit
 
-# run e2e tests
+# run e2e tests (needs Java and a Chrome old enough for chromedriver 2.46)
 npm run e2e
 
 # run all tests
