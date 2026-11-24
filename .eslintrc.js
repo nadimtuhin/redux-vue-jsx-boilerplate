@@ -8,12 +8,17 @@ module.exports = {
   extends: 'standard',
   // required to lint *.vue files
   plugins: [
-    'html'
+    'html',
+    // only used for react/jsx-uses-vars so components used in JSX
+    // (e.g. <Hello />) are not reported by no-unused-vars
+    'react'
   ],
   // add your custom rules here
   'rules': {
     // allow paren-less arrow functions
     'arrow-parens': 0,
+    // mark variables used as JSX tags as used
+    'react/jsx-uses-vars': 2,
     // allow async-await
     'generator-star-spacing': 0,
     // allow debugger during development

@@ -72,6 +72,10 @@ module.exports = app.listen(port, function (err) {
 
   // when env is testing, don't need open it
   if (process.env.NODE_ENV !== 'testing') {
-    opn(uri)
+    // opn rejects when no browser can be launched (SSH, Docker, CI). Since
+    // Node 15 an unhandled rejection kills the process, so ignore it here.
+    opn(uri).catch(function () {
+      console.log('> Could not open a browser, visit ' + uri + ' manually\n')
+    })
   }
 })

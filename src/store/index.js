@@ -1,8 +1,8 @@
-import { createStore } from 'redux';
+import { createStore } from 'redux'
 
 const initialState = {
   todos: []
-};
+}
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
@@ -10,13 +10,13 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         todos: [...state.todos, action.payload.todo]
-      };
+      }
 
     default:
-      return state;
+      return state
   }
-};
+}
 
-const store = createStore(reducer);
+const store = createStore(reducer)
 
-export default store;
+export default store

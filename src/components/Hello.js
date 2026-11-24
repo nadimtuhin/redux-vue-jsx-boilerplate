@@ -1,4 +1,4 @@
-import './Hello.css';
+import './Hello.css'
 
 export default {
   name: 'hello',
@@ -7,7 +7,7 @@ export default {
       msg: 'Welcome to Your Vue.js App'
     }
   },
-  render(h) {
+  render (h) {
     return (
       <div class="hello">
         <h1>{this.msg}</h1>
@@ -54,6 +54,6 @@ export default {
           </li>
         </ul>
       </div>
-    );
+    )
   }
 }
