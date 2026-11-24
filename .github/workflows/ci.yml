@@ -37,7 +37,14 @@ jobs:
       - name: Build
         run: yarn build
 
+      # selenium-server 2.53 runs on Java 21; newer JDKs reject its jar.
       # chromedriver matches the runner's Chrome via detect_chromedriver_version
-      # in .npmrc; selenium-server needs the Java preinstalled on the runner.
+      # in .npmrc.
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
       - name: E2E tests
         run: yarn e2e
